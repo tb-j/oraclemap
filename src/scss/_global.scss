@@ -1,0 +1,100 @@
+// 
+// Global
+// 
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+// Styling for the background video element
+
+video.bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+}
+
+// Mobile fallback for touch screen devices which typically
+// do not load HTML video
+
+@media (pointer: coarse) and (hover: none) {
+    body {
+        background: url('../assets/img/bg-mobile-fallback.jpg') $primary no-repeat center center scroll;
+        background-size: cover;
+    }
+
+    body video {
+        display: none;
+    }
+}
+
+#map {
+    width: 950px;
+    height: 520px;
+    border: 3px solid white;
+}
+
+#map2 {
+    // margin-top: 20px;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+
+}
+
+#left_panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 100px;
+    background: grey;
+}
+
+#right_panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    color: #fff;
+    background: black;
+}
+
+#drag {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: w-resize;
+}
+
+.oracle {
+    width: 200px;
+    padding-bottom: 10px;
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}

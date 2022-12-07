@@ -1,0 +1,77 @@
+.masthead {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Overlay for the masthead
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: fade-out($black, 0.15);
+  }
+  
+
+  // Masthead content element
+  .masthead-content {
+    position: relative;
+    max-width: 90rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    // Styling for the signup form input
+    .input-group-newsletter {
+      input {
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      button {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: calc(1rem + 2px);
+      }
+    }
+  }
+}
+
+// Styling for the masthead at the large breakpoint and up
+@include media-breakpoint-up(lg) {
+  .masthead {
+    height: 100%;
+    width: 90vw;
+    min-height: 0;
+    padding-bottom: 0;
+    
+    &::before {
+      transform: skew(-4deg);
+      transform-origin: top left;
+    }
+
+
+    .masthead-content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Change the width of the masthead on xl breakpoint and up
+@include media-breakpoint-up(xl) {
+  .masthead {
+    // width: 95vw;
+    // padding-left: 20px;
+  }
+}
