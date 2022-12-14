@@ -11,8 +11,8 @@ module.exports = function renderScripts() {
     
     sh.cp('-R', sourcePath, destPath)
 
-    const sourcePathScriptsJS = upath.resolve(upath.dirname(__filename), '../src/js/scripts.js');
-    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../dist/js/scripts.js');
+    const sourcePathScriptsJS = upath.resolve(upath.dirname(__filename), '../src/js/script.js');
+    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../dist/js/script.js');
     
     const copyright = `/*!
 * Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
