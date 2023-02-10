@@ -118,6 +118,7 @@ function sendData(data) {
     },
     body: JSON.stringify({
       "imageData": data.data1.replace('data:image/png;base64,', ''),
+      "modelId": 0
     })
   })
     .then(response => {
